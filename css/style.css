@@ -1,0 +1,60 @@
+body {
+  margin: auto;
+  font-family: "Oxygen", sans-serif;
+  background-color: #E5DACC;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+  padding: 15px;
+  box-sizing: content-box;
+}
+
+.showMark {
+  width: 50%;
+  height: auto;
+  padding: 15px;
+}
+
+.showPreview {
+  width: 50%;
+  height: auto;
+  padding: 18px;
+}
+
+textarea {
+  max-width: 70%;
+  padding: 20px;
+  text-align: left;
+  border-radius: 27px;
+  border-color: #63595C;
+  color: black;
+}
+
+h1 {
+  color: #8783C6;
+}
+
+p {
+  color: #BA94A0;
+}
+
+.modifyText {
+  font-size: 25px;
+  color: #7F7276;
+}

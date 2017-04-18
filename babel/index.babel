@@ -1,0 +1,35 @@
+class Preview extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      mark: ""
+    };
+  }
+
+  handleChange(event) {
+    this.setState({
+      mark: event.target.value
+    });
+  }
+
+  render() {
+    return (
+      <div className = "container">
+        <div className = "showMark text-center">
+          <h1>Markdown</h1>
+          <textarea onChange = {() => this.handleChange(event)} value = {this.state.mark} rows = "20" cols = "60" />
+        </div>
+        <div className ="showPreview">
+          <h1 className = "text-center">Preview</h1>
+          <p>You may wonder what this is supposed to be...It's a "markdown" previewer.</p>
+          <p>Markdown converts plain text to valid HTML. Try it out with "### _"</p>
+          <div className = "modifyText" dangerouslySetInnerHTML = {{__html: marked(this.state.mark)}}></div>
+            
+        </div>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Preview />, document.querySelector(".showMark"));
